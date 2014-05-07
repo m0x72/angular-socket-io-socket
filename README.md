@@ -35,6 +35,8 @@ angular.module('myApp')
 
 ```
 ## Changelog
+v 0.1.1
+*  fixed bower's main attribute
 
 v 0.1.0
 *  initial version  - provides:
