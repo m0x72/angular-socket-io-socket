@@ -1,4 +1,4 @@
-angular-socket-io-socket [![Build Status](https://travis-ci.org/m0x72/angular-socket-io-socket.png)](https://travis-ci.org/btford/angular-socket-io)
+angular-socket-io-socket [![Build Status](https://travis-ci.org/m0x72/angular-socket-io-socket.svg?branch=master)](https://travis-ci.org/m0x72/angular-socket-io-socket)
 ========================
 
 Extending [btford's](https://github.com/btford) [angular-socket-io](https://github.com/btford/angular-socket-io) component by exposing socket.io's socket socket-object
