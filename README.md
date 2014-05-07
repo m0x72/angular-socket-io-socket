@@ -1,4 +1,4 @@
-angular-socket-io-socket
+angular-socket-io-socket [![Build Status](https://travis-ci.org/m0x72/angular-socket-io-socketi.png)](https://travis-ci.org/btford/angular-socket-io)
 ========================
 
 Extending [btford's](https://github.com/btford) [angular-socket-io](https://github.com/btford/angular-socket-io) component by exposing socket.io's socket socket-object
@@ -34,6 +34,13 @@ angular.module('myApp')
 });
 
 ```
+## Changelog
+
+v 0.1.0
+*  initial version  - provides:
+  *  access to socket object via `yourFactory.socket`
+  *  monkey patching `$emit`to cause `$digest` cycles on any incoming events (and keeping bindings to the socket object aware)
+
 ## Credits
 Credits go to [Brian Ford](http://btford.com) ([btford](https://github.com/btford)) and his [angular-socket-io](https://github.com/btford/angular-socket-io) project
 
