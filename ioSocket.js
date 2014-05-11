@@ -18,7 +18,7 @@ factory('ioSocketFactory', function (socketFactory, $timeout) {
       opts.ioSocket.$emit = function () {
         var _arguments = arguments
         $timeout(function (){
-          $emit.apply(opts, _arguments);
+          $emit.apply(opts.ioSocket, _arguments);
         }, 0);
       }
     })();

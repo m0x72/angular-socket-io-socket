@@ -36,12 +36,20 @@ describe('ioSocketFactory', function () {
     it('should increment (dummy) eventCounter property', function () {
       var evCounter = socket.socket.eventCounter;
       mockIoSocket.$emit('event');
+
+      expect(socket.socket.eventCounter).toBe(evCounter);
+
+      $timeout.flush();
       expect(socket.socket.eventCounter).toBe(++evCounter);
     })
 
     it('should run a digest and thus execute scope watcher', function () {
       scope.$watch(spy)
       mockIoSocket.$emit('event');
+
+      expect(spy).not.toHaveBeenCalled();
+
+      $timeout.flush();
       expect(spy).toHaveBeenCalled();
     })
 
@@ -55,6 +63,9 @@ describe('ioSocketFactory', function () {
 
       mockIoSocket.$emit('event');  // simulate incoming event, by calling socket.io's incoming event handler (of type EventEmitter)
 
+      expect(spy).not.toHaveBeenCalled();
+
+      $timeout.flush();
       expect(spy).toHaveBeenCalled();   // expect our listener to have been called (eventCounter is tested in case above)
 
     });
