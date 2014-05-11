@@ -35,8 +35,11 @@ angular.module('myApp')
 
 ```
 ## Changelog
+v0.1.2
+*  changed $emit wrapper to $timeout to account for double digest cycles when socket.io handles events immediatley
+
 v 0.1.1
-*  fixed bower's main attribute
+*  fixed bower.json
 
 v 0.1.0
 *  initial version  - provides:

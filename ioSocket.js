@@ -7,7 +7,7 @@
 angular.module('m0x72.ioSocket', [
   'btford.socket-io'
 ]).
-factory('ioSocketFactory', function (socketFactory, $rootScope) {
+factory('ioSocketFactory', function (socketFactory, $timeout) {
   return function (opts) {
     opts.ioSocket = opts.ioSocket || io.connect();
 
@@ -17,9 +17,9 @@ factory('ioSocketFactory', function (socketFactory, $rootScope) {
       var $emit = opts.ioSocket.$emit
       opts.ioSocket.$emit = function () {
         var _arguments = arguments
-        $rootScope.$apply(function (){
-          $emit.apply(opts.ioSocket, _arguments);
-        })
+        $timeout(function (){
+          $emit.apply(opts, _arguments);
+        }, 0);
       }
     })();
 
