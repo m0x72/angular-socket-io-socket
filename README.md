@@ -35,7 +35,10 @@ angular.module('myApp')
 
 ```
 ## Changelog
-v0.1.2
+v 0.1.3
+*  fix to v 0.1.2
+
+v 0.1.2
 *  changed $emit wrapper to $timeout to account for double digest cycles when socket.io handles events immediatley
 
 v 0.1.1
