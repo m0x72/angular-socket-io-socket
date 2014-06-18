@@ -35,6 +35,9 @@ angular.module('myApp')
 
 ```
 ## Changelog
+v 0.1.4
+*  syntax fix (missing semicolon in ioSocket.js; thanks [@murum](https://github.com/murum))
+
 v 0.1.3
 *  fix to v 0.1.2
 
